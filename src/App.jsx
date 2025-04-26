@@ -1,6 +1,7 @@
 import Home from "./pages/Home";
 import NavBar from "./components/NavBar";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const isSellerPath = useLocation().pathname.includes("seller");
@@ -8,6 +9,7 @@ function App() {
   return (
     <div>
       {isSellerPath ? <></> : <NavBar />}
+      <Toaster />
       <div
         className={`${isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32"}`}
       >
